@@ -1,0 +1,4 @@
+#!/bin/bash
+curdir=$(pwd)
+cd /opt/ros/fuerte/stacks/maestor/scripts
+ln -s $curdir/reactDrum.py reactDrum.py
