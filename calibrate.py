@@ -137,15 +137,6 @@ def main():
     listen = listenThread()
     listen.start()
     calibrate()
-  
-    while True:
-        paradiddle()
-        if hitFound:
-            hitFound = False
-        else:
-            calibrate()
-    
-
     sys.exit()
 
 if __name__ == "__main__":
