@@ -54,7 +54,7 @@ def calibrate():
     global RightStrike
     global LeftStrike
 
-    configFile = open("hitConfig.txt", "w")
+    configFile = open("cymbalConfig.txt", "w")
     robot.setProperties("RWY LWY", "velocity velocity", "2 2")
     CalibratingRight = True
     CalibratingLeft = True

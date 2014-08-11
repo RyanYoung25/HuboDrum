@@ -86,7 +86,7 @@ def calibrate():
     print "Done Calibrating"
     print "Left Strike is: " + str(LeftStrike)
     print "Right Strike is: " + str(RightStrike)
-    configFile.write("Left: " + str(LeftStrike))
+    configFile.write("Left: " + str(LeftStrike)+ "\n")
     configFile.write("Right: " + str(RightStrike))
     configFile.close()
 
