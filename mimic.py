@@ -35,8 +35,8 @@ def loadJointValues():
             leftHit = float(words[1])
         elif words[0] == "Right:":
             rightHit = float(words[1])
-    leftBase = float(robot.getProperties("LWY", "position"))
-    rightBase = float(robot.getProperties("RWY", "position"))
+    leftBase = leftHit + .05 #float(robot.getProperties("LWY", "position"))
+    rightBase = rightHit - .05 #float(robot.getProperties("RWY", "position"))
     print leftBase
     print leftHit
     f.close()
