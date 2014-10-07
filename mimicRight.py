@@ -18,7 +18,8 @@ def startStopTime():
     global oldTime
     currTime = time.time() 
     interval = currTime - oldTime
-    if interval > .05:
+    if interval > .115:
+
         oldTime = currTime
         hitTimes.append(interval)
         print hitTimes

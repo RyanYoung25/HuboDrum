@@ -25,6 +25,7 @@ def loadJointValues():
         elif words[0] == "Right:":
             rightHit = float(words[1])
     leftBase = leftHit + .05 
+    rightHit = rightHit + .02
     rightBase = rightHit - .05
     print leftBase
     print leftHit
@@ -35,7 +36,7 @@ def hitReady():
     robot.setProperties("RSR LSR", "position position", "0 -.1")
     robot.setProperties("RSY LSY", "position position", ".5 -.5")
     robot.setProperties("REP LEP", "position position", "-.7 -.7")
-    robot.setProperties("RWY LWY", "position position", rightBase + " " + leftBase)
+    robot.setProperties("RWY LWY", "position position", str(rightBase) + " " + str(leftBase))
     robot.setProperties("RWP LWP", "position position", "0 0")
 
 def hitLeft():
@@ -73,6 +74,7 @@ def waitForJoints():
     robot.waitForJoint("LWP")
 
 def main():
+    loadJointValues()
     setVelocities()
     hitReady()
     waitForJoints()

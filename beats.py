@@ -14,7 +14,7 @@ def getStrikes():
     global rightHit
     global leftBase
     global rightBase
-    f = open("cymbalConfig.txt", "r")
+    f = open("hitConfig.txt", "r")
     for line in f:
         words = line.split(" ")
         if words[0] == "Left:":
@@ -22,7 +22,7 @@ def getStrikes():
         elif words[0] == "Right:":
             rightHit = float(words[1])
     leftBase = float(robot.getProperties("LWY", "goal"))
-    rightBase = rightHit - .05
+    rightBase = rightHit - .1
 
 
 
@@ -111,7 +111,7 @@ def play():
     beat1()
     beat2()
     beat3()
-    beat4()
+    #beat4()
 
 if __name__ == "__main__":
     getStrikes()

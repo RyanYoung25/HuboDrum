@@ -17,8 +17,8 @@ rightBase = 0
 def startStopTime():
     global oldTime
     currTime = time.time() 
-    interval = currTime - oldTime
-    if interval > .05:
+    interval = currTime - oldTime - .1
+    if interval > .15:
         oldTime = currTime
         hitTimes.append(interval)
         print hitTimes
