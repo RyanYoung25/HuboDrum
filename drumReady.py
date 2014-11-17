@@ -14,6 +14,7 @@ def hitReady():
     robot.setProperties("RSR LSR", "position position", "0 -.1")
     robot.setProperties("RSY LSY", "position position", ".5 -.5")
     robot.setProperties("REP LEP", "position position", "-.7 -.7")
+    robot.setProperties("RFZ LFZ", "position position", "-.54 -.54")
 
 def hitLeft():
     waitForJoints()
@@ -47,7 +48,7 @@ def waitForJoints():
     robot.waitForJoint("LWP")
 
 def main():
-    setVelocities()
+    #setVelocities()
     hitReady()
     waitForJoints()
 
